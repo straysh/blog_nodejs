@@ -1,7 +1,33 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+        style
+            body {padding: 60px 0 40px 0}
+        link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.css')
+    body
+        div.navbar.navbar-fixed-top
+            div.navbar-inner
+                div.container
+                    a.btn.btn-navbar(data-toggle="collapse", data-target=".nav-collapse")
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.brand(href="/")="Microblog"
+                    div.nav-collapse
+                        ul.nav
+                            li.active
+                                a(href="/", target="_blank")="首页"
+                            li
+                                a(href="/")="登录"
+                            li
+                                a(href="/")="注册"
+        div#container.container
+            block content
+    hr
+    footer
+        p
+            a(href="http://nodejs.straysh.info", target="_blank")="nodejs.straysh.info 2014"
+    script(src='/javascripts/jquery-1.9.0.js')
+    script(src='/javascripts/bootstrap.js')
